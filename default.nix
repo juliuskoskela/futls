@@ -1,11 +1,12 @@
 let
   mkCheck = {
-    name,
     pkgs,
-    check,
     src ? null,
     buildInputs ? [],
     nativeBuildInputs ? [],
+  }:{
+    name,
+    check,
   }:
     pkgs.stdenv.mkDerivation {
       inherit name src buildInputs nativeBuildInputs;
