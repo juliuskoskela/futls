@@ -6,6 +6,6 @@
   };
 
   outputs = { ... }: {
-    lib = ./default.nix;
+    lib = import ./default.nix;
   };
 }
